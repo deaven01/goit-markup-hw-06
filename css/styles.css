@@ -358,6 +358,7 @@ p {
 .portfolio .example {
     width: calc((100% - 48px)/3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .portfolio .example:hover {
@@ -837,8 +838,6 @@ input[type="checkbox"]:checked {
     }
 
     /* #endregion header */
-    /* #region menu */
-    /* #endregion menu */
     /* #region first section */
     .head {
         max-width: 216px;
@@ -865,8 +864,6 @@ input[type="checkbox"]:checked {
     .list-heading {
         font-weight: 700;
         font-size: 36px;
-
-        /* line-height: 40px; */
         line-height: 1.11111;
         text-align: center;
     }
@@ -879,10 +876,10 @@ input[type="checkbox"]:checked {
     /* #endregion second section */
     /* #region third section */
     .list {
-        flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         gap: 72px;
+        flex-direction: column;
     }
 
     .team .list-heading {
@@ -899,19 +896,18 @@ input[type="checkbox"]:checked {
     /* #endregion third section */
     /* #region forth section */
     .apps {
-        flex-wrap: wrap;
         gap: 48px;
+        flex-direction: column;
     }
 
     .portfolio .example {
-        width: 100%;
+        width: 288px;
+        margin: 0 auto;
     }
 
     .portfolio .list-heading {
         font-weight: 500;
         font-size: 20px;
-
-        /* line-height: 24px; */
         line-height: 1.2;
         text-align: left;
     }
@@ -930,6 +926,7 @@ input[type="checkbox"]:checked {
         max-width: 288px;
         margin-bottom: 72px;
         text-align: left;
+        margin: 16px auto 72px auto;
     }
 
     .finale .social-media {
@@ -948,7 +945,7 @@ input[type="checkbox"]:checked {
     }
 
     .subscribe-input {
-        width: 100%;
+        width: 288px;
     }
 
     .subscribe-btn {
@@ -960,7 +957,7 @@ input[type="checkbox"]:checked {
     /* #region overlay */
     .modal {
         padding: 24px 16px;
-        width: calc(100% - 32px);
+        width: 288px;
         margin: auto auto;
     }
 
@@ -976,8 +973,7 @@ input[type="checkbox"]:checked {
     /* #endregion overlay */
 }
 
-@media (min-width:320px) and (max-width:767px) {
-
+@media (max-width:768px) {
 
     .links {
         display: none;
@@ -996,29 +992,154 @@ input[type="checkbox"]:checked {
 
 @media (min-width:768px) {
 
+    /* #region header*/
+    .links,
+    .navigation .contacts {
+        display: flex;
+    }
+
+    .navigation .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .nav-bar {
+        justify-content: flex-start;
+    }
+
+    .contacts {
+        font-size: 12px;
+    }
+
     .navigation .logo {
         padding: 24px 0;
-        margin-right: 76px;
+        margin-right: 120px;
     }
 
     .menu-button {
         display: none;
     }
 
+    /* #endregion header*/
+    /* #region first section */
     .head {
         max-width: 496px;
         margin-bottom: 36px;
+        font-size: 56px;
+        line-height: 1.07143;
     }
 
     .banner .container {
         padding: 112px 0;
     }
 
+    /* #endregion first section */
+    /* #region second section */
     .benefits {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 72px 24px;
+    }
+
+    .list-heading {
+        text-align: left;
+    }
+
+    .benefits-list {
+        width: calc((100% - 56px)/2);
+    }
+
+    /* #endregion second section */
+    /* #region third section */
+    .list {
+        flex-direction: row;
+        gap: 64px 24px;
+        justify-content: center;
+    }
+
+    .team .list-heading {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    /* #endregion third section */
+    /* #region forth section */
+    .apps {
+        gap: 72px 24px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .portfolio .example {
+        width: 356px;
+        margin: 0 auto;
+    }
+
+    .portfolio .list-heading {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    /* #endregion forth section */
+    /* #region footer */
+    .finale .container {
+        display: flex;
+        padding-left: 108px;
+        gap: 72px 24px;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+
+    .footer-desc {
+        max-width: 264px;
+        margin-bottom: 0;
+        margin-top: 16px;
+    }
+
+    .footer-social-media {
+        margin-bottom: 0;
+    }
+
+    .subscribe-form {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .subscribe-input {
+        width: 264px;
+    }
+
+    /* #endregion footer */
+    /* #region overlay */
+    .modal {
+        padding: 24px;
+        width: 408px;
+    }
+
+    /* #endregion overlay */
+    .menu-overlay {
+        display: none;
+    }
+}
+
+@media (min-width:768px) and (max-width:1158px) {
+    .benefits .block {
+        display: none;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact {
+        padding: 0;
     }
 }
 
