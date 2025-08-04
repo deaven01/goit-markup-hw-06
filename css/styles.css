@@ -663,6 +663,7 @@ input[type="checkbox"]:checked {
     justify-content: center;
     fill: transparent;
     margin-right: 8px;
+    flex-shrink: 0;
 }
 
 .privacy-checkbox:checked+.privacy-label .checkbox-icon {
@@ -1087,13 +1088,7 @@ input[type="checkbox"]:checked {
 
     /* #endregion forth section */
     /* #region footer */
-    .finale .container {
-        display: flex;
-        padding-left: 108px;
-        gap: 72px 24px;
-        flex-wrap: wrap;
-        text-align: left;
-    }
+
 
     .footer-desc {
         max-width: 264px;
@@ -1122,9 +1117,12 @@ input[type="checkbox"]:checked {
     }
 
     /* #endregion overlay */
+    /* #region menu overlay */
     .menu-overlay {
         display: none;
     }
+
+    /* #endregion menu overlay */
 }
 
 @media (min-width:768px) and (max-width:1158px) {
@@ -1141,9 +1139,19 @@ input[type="checkbox"]:checked {
     .contact {
         padding: 0;
     }
+
+    .finale .container {
+        display: flex;
+        padding-left: 108px;
+        gap: 72px 24px;
+        flex-wrap: wrap;
+        text-align: left;
+    }
 }
 
 @media (min-width:1158px) {
+
+    /* #region quick settings */
     .section {
         padding: 120px 0;
     }
@@ -1152,6 +1160,8 @@ input[type="checkbox"]:checked {
         padding: 0 15px 0 15px;
     }
 
+    /* #endregion quick settings */
+    /* #region header*/
     .navigation .logo {
         padding: 24px 0;
         margin-right: 76px;
@@ -1161,8 +1171,52 @@ input[type="checkbox"]:checked {
         margin-bottom: 48px;
     }
 
+    .contact {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* #endregion header*/
+    /* #region first section */
     .banner .container {
         padding: 188px 0;
+    }
+
+    /* #endregion first section */
+    /* #region second section */
+    .benefits {
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .benefits-list {
+        width: calc((100% - 72px)/4);
+    }
+
+    .list-heading {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .desc {
+        font-weight: 400;
+    }
+
+    /* #endregion second section */
+    /* #region third section */
+    /* #endregion third section */
+    /* #region forth section */
+    .apps {
+        gap: 48px 24px;
+    }
+
+    /* #endregion forth section */
+    /* #region footer */
+    .finale .container {
+        display: flex;
+        gap: 0;
+        text-align: left;
     }
 
     .footer-logo {
@@ -1180,8 +1234,12 @@ input[type="checkbox"]:checked {
     .subscribe {
         margin-left: 80px;
     }
+
+    /* #endregion footer */
+    /* #region overlay */
+    .form-comment {
+        margin-bottom: 8px;
+    }
+
+    /* #endregion overlay */
 }
-
-/* 
-
- */
