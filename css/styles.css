@@ -152,7 +152,7 @@ p {
 /* #region first section */
 .banner {
     color: #ffffff;
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office-1.jpg");
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-min.jpg");
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
@@ -1204,8 +1204,6 @@ input[type="checkbox"]:checked {
     }
 
     /* #endregion second section */
-    /* #region third section */
-    /* #endregion third section */
     /* #region forth section */
     .apps {
         gap: 48px 24px;
@@ -1242,4 +1240,10 @@ input[type="checkbox"]:checked {
     }
 
     /* #endregion overlay */
+}
+
+@media (min-resolution: 2x) {
+    .banner {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back@2x-min.jpg");
+    }
 }
