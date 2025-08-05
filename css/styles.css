@@ -11,6 +11,8 @@ body {
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 ul {
@@ -30,9 +32,9 @@ p {
 }
 
 .container {
-    max-width: 1158px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 320px;
+    padding: 0 16px;
+    margin: 0 auto;
 }
 
 .section {
@@ -152,8 +154,6 @@ p {
 /* #region first section */
 .banner {
     color: #ffffff;
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-min.jpg");
-    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
@@ -358,13 +358,6 @@ p {
 .portfolio .example {
     width: calc((100% - 48px)/3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-}
-
-.portfolio .example:hover {
-    box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08),
-        0 1px 1px rgba(46, 47, 66, 0.16),
-        0 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* #endregion forth section */
@@ -699,6 +692,8 @@ input[type="checkbox"]:checked {
 
 /* #endregion overlay */
 /* #region menu overlay */
+
+
 .menu-overlay {
     position: fixed;
     opacity: 0;
@@ -719,6 +714,8 @@ input[type="checkbox"]:checked {
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
     background-color: #ffffff;
     width: 100%;
     height: 100%;
@@ -727,7 +724,17 @@ input[type="checkbox"]:checked {
     transform: translate(-50%, -50%);
     position: absolute;
     overflow-y: auto;
-    padding: 24px 16px;
+    padding: 0 16px;
+    padding-top: 72px;
+    padding-bottom: 40px;
+}
+
+.menu-links-navigation {
+    margin-bottom: auto;
+}
+
+.menu-address {
+    margin-bottom: 48px;
 }
 
 .menu-links {
@@ -761,20 +768,14 @@ input[type="checkbox"]:checked {
     justify-content: center;
 }
 
-.menu-bottom {
-    margin-bottom: 40px;
-    position: fixed;
-    bottom: 0;
-}
-
 .menu-contacts {
-    margin-bottom: 48px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 .menu-contact {
+    font-style: normal;
     text-decoration: none;
     font-weight: 500;
     font-size: 20px;
@@ -799,6 +800,9 @@ input[type="checkbox"]:checked {
 }
 
 .menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     fill: #2E2F42;
     padding: 0;
@@ -811,12 +815,19 @@ input[type="checkbox"]:checked {
     align-items: center;
     cursor: pointer;
     margin-left: auto;
-    margin-bottom: 24px;
     background-color: transparent;
 }
 
+.blue-nav {
+    color: #404BBF;
+}
+
+.blue-address {
+    color: #4D5AE5;
+}
+
 /* #endregion menu overlay */
-@media (min-width:320px) {
+@media (min-width:0px) {
 
     /* #region quick settings */
     .section {
@@ -836,6 +847,9 @@ input[type="checkbox"]:checked {
     .menu-button {
         display: flex;
         align-items: center;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
     }
 
     /* #endregion header */
@@ -847,8 +861,10 @@ input[type="checkbox"]:checked {
         line-height: 1.11111;
     }
 
-    .banner .container {
+    .banner {
         padding: 72px 0;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-mob-min.jpg");
+        max-width: 320px;
     }
 
     /* #endregion first section */
@@ -923,11 +939,14 @@ input[type="checkbox"]:checked {
         margin: 0 auto;
     }
 
+    .footer-logo {
+        margin-bottom: 72px;
+    }
+
     .footer-desc {
         max-width: 288px;
-        margin-bottom: 72px;
         text-align: left;
-        margin: 16px auto 72px auto;
+        margin: 16px auto 0 auto;
     }
 
     .finale .social-media {
@@ -974,6 +993,12 @@ input[type="checkbox"]:checked {
     /* #endregion overlay */
 }
 
+@media (min-resolution: 2x) and (min-width: 320px) {
+    .banner {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-mob@2x-min.jpg");
+    }
+}
+
 @media (max-width:768px) {
 
     .links {
@@ -992,6 +1017,9 @@ input[type="checkbox"]:checked {
 }
 
 @media (min-width:768px) {
+    .container {
+        max-width: 768px;
+    }
 
     /* #region header*/
     .links,
@@ -1031,8 +1059,10 @@ input[type="checkbox"]:checked {
         line-height: 1.07143;
     }
 
-    .banner .container {
+    .banner {
         padding: 112px 0;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-tab-min.jpg");
+        max-width: 768px;
     }
 
     /* #endregion first section */
@@ -1077,6 +1107,7 @@ input[type="checkbox"]:checked {
     .portfolio .example {
         width: 356px;
         margin: 0 auto;
+
     }
 
     .portfolio .list-heading {
@@ -1125,6 +1156,12 @@ input[type="checkbox"]:checked {
     /* #endregion menu overlay */
 }
 
+@media (min-resolution: 2x) and (min-width: 756px) {
+    .banner {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-tab@2x-min.jpg");
+    }
+}
+
 @media (min-width:768px) and (max-width:1158px) {
     .benefits .block {
         display: none;
@@ -1149,6 +1186,14 @@ input[type="checkbox"]:checked {
     }
 }
 
+@media (max-width: 1158px) {
+    .portfolio .example {
+        box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08),
+            0 1px 1px rgba(46, 47, 66, 0.16),
+            0 2px 1px rgba(46, 47, 66, 0.08);
+    }
+}
+
 @media (min-width:1158px) {
 
     /* #region quick settings */
@@ -1157,7 +1202,9 @@ input[type="checkbox"]:checked {
     }
 
     .container {
-        padding: 0 15px 0 15px;
+        max-width: 1158px;
+        margin: 0 auto;
+        padding: 0 15px;
     }
 
     /* #endregion quick settings */
@@ -1178,8 +1225,10 @@ input[type="checkbox"]:checked {
 
     /* #endregion header*/
     /* #region first section */
-    .banner .container {
+    .banner {
         padding: 188px 0;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-desk-min.jpg");
+        max-width: 1440px;
     }
 
     /* #endregion first section */
@@ -1207,6 +1256,12 @@ input[type="checkbox"]:checked {
     /* #region forth section */
     .apps {
         gap: 48px 24px;
+    }
+
+    .portfolio .example:hover {
+        box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08),
+            0 1px 1px rgba(46, 47, 66, 0.16),
+            0 2px 1px rgba(46, 47, 66, 0.08);
     }
 
     /* #endregion forth section */
@@ -1242,8 +1297,8 @@ input[type="checkbox"]:checked {
     /* #endregion overlay */
 }
 
-@media (min-resolution: 2x) {
+@media (min-resolution: 2x) and (min-width: 1158px) {
     .banner {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back@2x-min.jpg");
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/back-desk@2x-min.jpg");
     }
 }
