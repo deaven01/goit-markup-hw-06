@@ -1136,6 +1136,11 @@ input[type="checkbox"]:checked {
         gap: 24px;
     }
 
+    .footer-logo {
+        margin-bottom: 0;
+    }
+
+
     .subscribe-input {
         width: 264px;
     }
